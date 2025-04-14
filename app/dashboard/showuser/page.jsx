@@ -41,7 +41,8 @@ const ans = data.map((key)=>{
         <div id="sidebar">
             <Link href='insert'>Insert</Link>
             <Link href='showproduct'>Show Product</Link>
-            <Link href='showuser'>Show User</Link>
+            {/* <Link href='showuser'>Show User</Link> */}
+            <Link href='search'>Search</Link>
         </div>
         <div id="content">
         <h1 className='text-4xl text-black text-center font-bold'>User Show Page</h1>

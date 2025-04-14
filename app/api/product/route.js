@@ -3,16 +3,15 @@ import mongodb from "@/app/utils/db"
 
 export async function POST(req,res){
     const data = await req.json();
-    const {name,model,price,img} = data;
-    console.log(img)
-    console.log(data);
+    const {name,model,price,img,category} = data;
     try {
        await mongodb();
        const Data = new ProductModel({
            name:name,
            model:model,
            price:price,
-           img:img
+           img:img,
+           category:category,
         })
         await Data.save();
         return Response.json(Data)

@@ -21,9 +21,9 @@ form{
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin: 70px auto;
+  margin: 30px auto;
   box-shadow: 0 0 15px rgb(227, 227, 227);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 form input{
   border: none;
@@ -46,7 +46,12 @@ form textarea{
   width: 90%;
   border: 1px solid;
 }
-
+form select{
+  width: 90%;
+  border-radius: 50px;
+  padding: 10px 15px;
+  border: 1px solid;
+}
 
 #footer{
   display: flex;
@@ -92,7 +97,7 @@ form textarea{
   background-color: white;
 }
 #dashboard #sidebar{
-  height: 40vh;
+  height: 80vh;
   background-color: white;
   width: 20%;
   display: flex;
@@ -101,30 +106,51 @@ form textarea{
   justify-content: start;
   gap: 10px;
   padding: 10px 20px;
+  background-color: black;
 }
 #dashboard #sidebar a{
   font-weight: bold;
   text-align: start;
-  padding: 7px;
+  padding: 7px 15px;
   width: 100%;
-  border: 1px solid black;
+  color: white;
+  box-shadow: 0 0 2px;
+  border-radius: 50px;
 }
 #dashboard #content{
   background-color: white;
   width: 80%;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 table{
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 table th{
   background-color: black;
   color: white;
+  border: 1px solid black;
 }
 table th,td{
   text-align: center;
   padding: 10px;
+}
+table td{
+  border: 1px solid;
+  width: 25%;
+}
+
+#search{
+  display: flex;
+  margin-top: 0;
+  margin-bottom:10px;
+}
+#search select{
+  border-radius: 0px;
+  box-shadow: 0 0 1px;
+  border: none;
 }
 
 
@@ -135,9 +161,13 @@ table th,td{
   #dashboard #sidebar {
     width: 100%;
     max-width: none;
+    height: auto;
+    padding: 30px;
   }
   #dashboard #content {
     width: 100%;
+    height: auto;
+    overflow-y: none;
   }
 
   #footer {

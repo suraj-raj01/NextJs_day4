@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function InsertProduct() {
   const [Input, setInput] = useState("");
   const [filename,setFile] = useState("");
+  const [userType,setUserType] = useState("")
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -31,7 +32,7 @@ export default function InsertProduct() {
     try {
         const response = await axios.post(cloudinary_api,formData);
         console.log(response.data.url);
-        const data = await axios.post(api,{img:response.data.url,...Input});
+        const data = await axios.post(api,{img:response.data.url,category:userType,...Input});
         console.log(data);
         alert("Data Inserted success");
     } catch (error) {
@@ -47,13 +48,25 @@ export default function InsertProduct() {
         <div id="sidebar">
           <Link href="insert">Insert</Link>
           <Link href="showproduct">Show Product</Link>
-          <Link href="showuser">Show User</Link>
+          {/* <Link href="showuser">Show User</Link> */}
+          <Link href='search'>Search</Link>
+          <Link href="searchbycategory">Search by Category</Link>
         </div>
         <div id="content">
 
           <div id="signup">
             <form>
-              <h1 className="text-3xl p-2">User Product</h1>
+              <h1 className="text-2xl p-2">User Product</h1>
+              <label htmlFor="">Select Category</label>
+              <select name="category" id="" value={userType}
+              onChange={(e) => {
+                setUserType(e.target.value);
+              }}>
+                <option name="Mobile" value="Mobile">Mobile</option>
+                <option name="Laptop" value="Laptop">Laptop</option>
+                <option name="Tv" value="Tv">Tv</option>
+                <option name="Watch" value="Watch">Watch</option>
+              </select>
               <input
                 type="text"
                 placeholder="enter product name"
@@ -88,6 +101,7 @@ export default function InsertProduct() {
               </button>
             </form>
           </div>
+
         </div>
       </div>
     </>

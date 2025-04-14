@@ -31,7 +31,7 @@ const res=mydata.map((key)=>{
       <td>{key.model}</td>
       <td>{key.price}</td>
       <td>
-      <Image src={key.img} alt='product photo' height={50} width={100}/>
+      <Image src={key.img} alt='product photo' height={50} width={70}/>
       </td>
     </tr>
     </>
@@ -45,10 +45,12 @@ const res=mydata.map((key)=>{
         <div id="sidebar">
         <Link href='insert'>Insert</Link>
           <Link href='showproduct'>Show Product</Link>
-          <Link href='showuser'>Show User</Link>
+          {/* <Link href='showuser'>Show User</Link> */}
+          <Link href='search'>Search</Link>
+          <Link href="searchbycategory">Search by Category</Link>
         </div>
         <div id="content">
-        <h1 className='text-4xl text-black text-center font-bold'>Show Product</h1>
+        <h1 className='text-3xl text-black text-center font-bold'>Show Product</h1>
         <table>
           <thead>
             <tr>

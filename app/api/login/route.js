@@ -4,7 +4,6 @@ import mongodb from "@/app/utils/db";
 export async function POST(req,res){
     const data = await req.json();
     const {email,password} = data;
-    console.log(data);
     try {
        await mongodb();
        const isUser = await UserModel.findOne({email:email})
