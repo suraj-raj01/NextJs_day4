@@ -3,6 +3,8 @@ import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import DashboardHeader from "@/app/components/DashboardHeader";
+import DashboardFooter from "@/app/components/DashboardFooter";
 
 export default function Search() {
   const [search, setSearch] = useState("");
@@ -45,14 +47,14 @@ export default function Search() {
   return (
     <>
       <Link href="dashboard/search"></Link>
+      <DashboardHeader/>
       <div id="dashboard">
-        <div id="sidebar">
+        {/* <div id="sidebar">
           <Link href="insert">Insert</Link>
           <Link href="showproduct">Show Product</Link>
-          {/* <Link href='showuser'>Show User</Link> */}
-          <Link href="search">Search</Link>
+         
           <Link href="searchbycategory">Search by Category</Link>
-        </div>
+        </div> */}
         <div id="content">
           <h1 className="text-3xl text-black text-center font-bold p-3">
             Search Page
@@ -82,6 +84,7 @@ export default function Search() {
           </table>
         </div>
       </div>
+      <DashboardFooter/>
     </>
   );
 }

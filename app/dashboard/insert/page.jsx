@@ -1,4 +1,6 @@
 "use client";
+import DashboardFooter from "@/app/components/DashboardFooter";
+import DashboardHeader from "@/app/components/DashboardHeader";
 import axios from "axios";
 import Link from "next/link";
 import { useState } from "react";
@@ -43,21 +45,20 @@ export default function InsertProduct() {
   return (
     <>
       <Link href="/"></Link>
-
+    <DashboardHeader/>
       <div id="dashboard">
-        <div id="sidebar">
+        {/* <div id="sidebar">
           <Link href="insert">Insert</Link>
           <Link href="showproduct">Show Product</Link>
-          {/* <Link href="showuser">Show User</Link> */}
-          <Link href='search'>Search</Link>
           <Link href="searchbycategory">Search by Category</Link>
-        </div>
+          <Link href="analysis">Analysis</Link>
+        </div> */}
         <div id="content">
 
           <div id="signup">
             <form>
-              <h1 className="text-2xl p-2">User Product</h1>
-              <label htmlFor="">Select Category</label>
+              <h1 className="text-2xl p-2 text-black">User Product</h1>
+              <label htmlFor="" className="text-black">Select Category</label>
               <select name="category" id="" value={userType}
               onChange={(e) => {
                 setUserType(e.target.value);
@@ -104,6 +105,7 @@ export default function InsertProduct() {
 
         </div>
       </div>
+      <DashboardFooter/>
     </>
   );
 }

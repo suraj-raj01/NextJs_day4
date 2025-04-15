@@ -3,6 +3,8 @@ import axios from "axios";
 import Link from "next/link";
 import { useState } from "react"
 import { useRouter } from 'next/navigation'
+import TopNavbar from "../components/TopNavbar";
+import Footer from "../components/Footer";
 
 export default function SignUp(){
   const[Input,setInput] = useState("");
@@ -29,8 +31,9 @@ export default function SignUp(){
 
   return(
     <>
-    <Link href='/'></Link>
-    <h1 className='text-4xl text-black text-center font-bold'>SignUp Page</h1>
+    <Link href='/signup'></Link>
+    <TopNavbar/>
+    <h1 className='text-4xl text-center font-bold'>SignUp Page</h1>
 
     <div id="signup">
     <form>
@@ -60,7 +63,7 @@ export default function SignUp(){
      <Link href='signin' className="font-bold">Already Have an account</Link>
     </form>
     </div>
-
+    <Footer/>
     </>
   )
 }

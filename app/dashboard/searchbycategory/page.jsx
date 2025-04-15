@@ -3,6 +3,8 @@ import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import DashboardHeader from "@/app/components/DashboardHeader";
+import DashboardFooter from "@/app/components/DashboardFooter";
 
 const page = () => {
   const[selectItem,setSelectItem] = useState("");
@@ -45,14 +47,15 @@ const page = () => {
   return (
     <div>
       <Link href='/dashbaord/searchbycategory'></Link>
+      <DashboardHeader/>
       <div id="dashboard">
-        <div id="sidebar">
+        {/* <div id="sidebar">
           <Link href="insert">Insert</Link>
           <Link href="showproduct">Show Product</Link>
-          {/* <Link href='showuser'>Show User</Link> */}
-          <Link href="search">Search</Link>
+          
           <Link href="searchbycategory">Search by Category</Link>
-        </div>
+          <Link href="analysis">Analysis</Link>
+        </div> */}
         <div id="content">
           <h1 className="text-3xl text-black text-center font-bold p-3">
             Search by Category
@@ -82,6 +85,7 @@ const page = () => {
           </table>
         </div>
       </div>
+      <DashboardFooter/>
     </div>
   )
 }

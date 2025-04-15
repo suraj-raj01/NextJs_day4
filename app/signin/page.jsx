@@ -3,6 +3,8 @@ import { useRouter } from 'next/navigation'
 import axios from "axios";
 import Link from "next/link";
 import { useState } from "react"
+import TopNavbar from '../components/TopNavbar';
+import Footer from '../components/Footer';
 
 export default function page(){
   const[Input,setInput] = useState("");
@@ -22,6 +24,7 @@ export default function page(){
           const response = await axios.post(api,Input);
           router.push('/dashboard')
           console.log(response.data)
+          localStorage.setItem("name",response.data.name)
           alert(response.data.msg);
       } catch (error) {
           console.log(error);
@@ -31,7 +34,8 @@ export default function page(){
     return(
       <>
       <Link href='/'></Link>
-      <h1 className='text-4xl text-black text-center font-bold'>SignIn Page</h1>
+      <TopNavbar/>
+      <h1 className='text-4xl text-center font-bold'>SignIn Page</h1>
   
       <div id="signup">
       <form>
@@ -53,7 +57,7 @@ export default function page(){
           <br />
       </form>
       </div>
-  
+      <Footer/>
       </>
     )
   }
