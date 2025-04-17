@@ -33,11 +33,12 @@ export default function SignUp(){
     <>
     <Link href='/signup'></Link>
     <TopNavbar/>
-    <h1 className='text-4xl text-center font-bold'>SignUp Page</h1>
+    {/* <h1 className='text-4xl text-center font-bold'>SignUp Page</h1> */}
 
     <div id="signup">
+      <br />
     <form>
-        <h1 className='text-3xl p-2'>User Information</h1>
+        <h3 className='text-1xl p-2'>User Registration</h3>
         <input type="text" placeholder='enter your name' 
         name='name'
         value={Input.name}
@@ -61,7 +62,9 @@ export default function SignUp(){
         <button className='p-2 bg-black text-white' onClick={handleSubmit}>Submit</button>
 
      <Link href='signin' className="font-bold">Already Have an account</Link>
+     <br />
     </form>
+    <br /><br />
     </div>
     <Footer/>
     </>

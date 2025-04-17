@@ -57,7 +57,7 @@ export default function InsertProduct() {
 
           <div id="signup">
             <form>
-              <h1 className="text-2xl p-2 text-black">User Product</h1>
+              <h3 className="text-2xl p-2 text-black">User Product</h3>
               <label htmlFor="" className="text-black">Select Category</label>
               <select name="category" id="" value={userType}
               onChange={(e) => {
@@ -100,6 +100,7 @@ export default function InsertProduct() {
               >
                 Submit
               </button>
+              <br />
             </form>
           </div>
 

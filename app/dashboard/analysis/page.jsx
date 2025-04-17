@@ -69,9 +69,9 @@ export default function Search() {
                 </div>
                 <div id="box">
                 <h2>Profit / Loss</h2>
-                <h2 className="text-3xl flex gap-3">
-                    <span className="text-green-500 font-bold">⇡ $541</span>
-                    <span className="text-red-500 font-bold">- ⇣ $221</span>
+                <h2 className="text-2xl flex gap-3">
+                    <span className="text-green-500 font-bold text-2xl">⇡ $541</span>
+                    <span className="text-red-500 font-bold text-2xl">- ⇣ $221</span>
                 </h2>
                 </div>
             </div>

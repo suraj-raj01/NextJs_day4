@@ -12,7 +12,7 @@ export default function TopNavbar() {
     <div>
       <div id="navbar">
         <div id="box">
-          <h1 className="text-4xl text-white">ECommerce</h1>
+          <h3 className="text-4xl text-white">ECommerce</h3>
         </div>
         <div id="box">
           <Link href="home">Home</Link>

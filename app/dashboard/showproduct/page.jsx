@@ -106,7 +106,7 @@ const res=mydata.map((key)=>{
               Submit
             </button> */}
           </form>
-          <button className='p-2 mb-2 bg-black ml-2 text-white' onClick={addProduct}>+ Add Product</button>
+          <button className='p-2 mb-2 bg-green-600 ml-2 text-white' onClick={addProduct}>+ Add Product</button>
         <table>
           <thead>
             <tr>
